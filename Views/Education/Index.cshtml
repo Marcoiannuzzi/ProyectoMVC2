@@ -1,0 +1,26 @@
+﻿@model EducationViewModel;
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<section class="page-section bg-warning vh-100" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-3">My Studies</h2>
+                <hr class="divider divider-light" />
+                <p class="text-white-75 mb-4">
+                    I´ve been taken several programming courses for becaming the profesional you need to turn your Ideas into Code </>. 
+                </p>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a class="btn btn-light btn-xl" asp-area="" asp-controller="Education" asp-action="Create">Add a new education</a>
+                }else
+                {
+                    <a class="btn btn-light btn-xl" asp-area="" asp-controller="Home" asp-action="Contact">Let´s get started</a>
+                }
+            </div>
+        </div>
+    </div>
+</section>

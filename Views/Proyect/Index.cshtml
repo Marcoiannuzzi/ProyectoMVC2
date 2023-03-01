@@ -1,9 +1,29 @@
-﻿<section class="page-section bg-dark text-white p-5">
-    <div class="container text-center">
-        <h2 class="text-white pt-5">These are my proyect!</h2>
-        <hr class="divider divider-light" />
-    </div>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model ProyectosModelview
+
+
+<section class="page-section bg-dark text-white p-5">
+
+    @if(SignInManager.IsSignedIn(User))
+    {
+        <div class="container text-center">
+            <h2 class="text-white pt-5">These are my proyect!</h2>
+            <a class="btn btn-primary mt-5" asp-action="Create" asp-controller="Proyect"> Add new proyect </a>
+        </div>
+    }
+    else
+    {
+        <div class="container text-center">
+            <h2 class="text-white pt-5">These are my proyect!</h2>
+            <hr class="divider divider-light" />
+        </div>
+    }
 </section>
+
+
+
 <div id="portfolio">
     <div class="container-fluid bg-dark">
         <div class="row  g-1">
@@ -68,6 +88,6 @@
 <section class="page-section bg-dark text-white">
     <div class="container px-4 px-lg-5 text-center">
         <h2 class="mb-4">Check all my work on my GitHub!</h2>
-        <a class="btn btn-light btn-xl" href="https://github.com/Marcoiannuzzi"target="_blank">GitHub</a>
+        <a class="btn btn-light btn-xl" href="https://github.com/Marcoiannuzzi" target="_blank">GitHub</a>
     </div>
 </section>

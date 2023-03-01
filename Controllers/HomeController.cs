@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProyectoMVC2.Models;
 using System.Diagnostics;
 
@@ -26,6 +27,7 @@ namespace ProyectoMVC2.Controllers
         {
             return View();
         }
+        
         public IActionResult Portfolio()
         {
             return View();

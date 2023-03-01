@@ -1,0 +1,20 @@
+﻿@model EducationViewModel
+
+<section class="page-section vh-80 mt-5 bg-dark text-white p-5">
+    <h1>Add a new Education</h1>
+
+
+    <form class="row g-3 needs-validation" novalidate asp-action="Create">
+
+        <partial name="_EducationFormPartialView" model="@Model" />
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Create Education</button>
+        </div>
+
+    </form>
+
+
+    <a class="btn btn-outline-primary m-2" asp-action="Index" asp-controller="Education">Go Back</a>
+
+</section>

@@ -1,0 +1,23 @@
+﻿@model ProyectosModelview
+
+
+<div class="col-md-4">
+    <label for="Name" class="form-label">Name</label>
+    <input asp-for="Name" type="text" class="form-control" id="Name" required>
+    @Html.ValidationMessageFor(x=>x.Name,"",new{@class = "text-danger"})
+</div>
+<div class="col-md-4">
+    <label for="Description" class="form-label">Description</label>
+    <input asp-for="Description" type="text" class="form-control" id="Description" required>
+    @Html.ValidationMessageFor(x=>x.Description,"",new{@class = "text-danger"})
+</div>
+<div class="col-md-4">
+    <label for="category" class="form-label">Category</label>
+    <input asp-for="category" type="text" class="form-control" id="category" required>
+    @Html.ValidationMessageFor(x=>x.category,"",new{@class = "text-danger"})
+</div>
+<div class="col-md-4">
+    <label for="Image" class="form-label">Image</label>
+    <input asp-for="Image" type="number" class="form-control" id="Image" required>
+    @Html.ValidationMessageFor(x=>x.Image,"",new{@class = "text-danger"})
+</div>
